@@ -17,7 +17,7 @@ class RunnersController < ApplicationController
   # GET /runners/1
   # GET /runners/1.xml
   def show
-    @runner = Runner.find(params[:id])
+    #@runner = Runner.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -62,7 +62,7 @@ class RunnersController < ApplicationController
   # PUT /runners/1
   # PUT /runners/1.xml
   def update
-    @runner = Runner.find(params[:id])
+    #@runner = Runner.find(params[:id])
 
     respond_to do |format|
       if @runner.update_attributes(params[:runner])
@@ -79,7 +79,7 @@ class RunnersController < ApplicationController
   # DELETE /runners/1
   # DELETE /runners/1.xml
   def destroy
-    @runner = Runner.find(params[:id])
+    #@runner = Runner.find(params[:id])
     @runner.destroy
 
     respond_to do |format|

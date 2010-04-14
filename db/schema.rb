@@ -9,10 +9,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100412131903) do
+ActiveRecord::Schema.define(:version => 20100414195446) do
 
   create_table "runners", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "runs", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "units", :force => true do |t|
+    t.string   "description"
+    t.date     "date"
+    t.integer  "runner_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
