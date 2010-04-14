@@ -4,5 +4,16 @@
 </p>
 
 
+<h2>Units</h2> 
+  <% @runner.units.each do |c| %> 
+    <p> 
+     <b>Description:</b> 
+     <%=h c.description %> 
+    </p> 
+    <p> 
+       <b>Date:</b>  <%=h c.date %>  </p> 
+  <% end %> 
+
 <%= link_to 'Edit', edit_runner_path(@runner) %> |
 <%= link_to 'Back', runners_path %>
+<%= link_to 'Manage Units', runner_units_path(@runner) %> 

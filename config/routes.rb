@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :runners
+  map.resources :runners, :has_many => :units
 
   # The priority is based upon order of creation: first created -> highest priority.
 

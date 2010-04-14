@@ -1,0 +1,15 @@
+<h1>Editing comment</h1> 
+<% form_for([@runner, @unit]) do |f| %>
+  <%= f.error_messages %>  
+  <p>  
+    <%= f.label :description %><br /> 
+    <%= f.text_field :descriptiom %> 
+  </p> 
+  <p> 
+    <%= f.label :date %><br />  
+    <%= f.text_field :date %>  </p>  
+  <p>  <%= f.submit "Update" %>  
+  </p> 
+<% end %> 
+<%= link_to 'Show', runner_unit_path(@runner, @unit) %>
+<%= link_to 'Back', runner_units_path(@runner) %> 

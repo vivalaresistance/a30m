@@ -1,0 +1,14 @@
+<h1>New unit</h1> 
+<% form_for([@runner, @unit]) do |f| %> 
+   <%= f.error_messages %>  
+  <p> 
+    <%= f.label :description %><br /> 
+    <%= f.text_field :description %>  </p>
+  <p> 
+       <%= f.label :date %><br /> 
+       <%= f.text_area :date %>  </p> 
+  <p> 
+       <%= f.submit "Create" %>  </p>
+ <% end %> 
+<%= link_to 'Back', runner_units_path(@runner) %> 
+

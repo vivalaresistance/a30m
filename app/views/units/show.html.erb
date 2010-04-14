@@ -1,0 +1,10 @@
+<h1>Unit for <%= @runner.name %></h1>
+
+ <p>
+  <b>Description:</b> 
+  <%=h @unit.description %> </p> 
+  <p>  
+    <b>Date:</b>  
+    <%=h @unit.date %> </p> 
+<%= link_to 'Edit', edit_runner_unit_path(@runner, @unit) %> 
+<%= link_to 'Back', runner_units_path(@runner) %> 
