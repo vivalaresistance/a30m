@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100414195446) do
+ActiveRecord::Schema.define(:version => 20100416153716) do
+
+  create_table "goals", :force => true do |t|
+    t.string   "description"
+    t.integer  "runner_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "runners", :force => true do |t|
     t.string   "name"

@@ -1,3 +1,4 @@
+<% @runner.goals.build if @runner.goals.empty? %> 
 <% form_for(@runner) do |f| %>
   <%= f.error_messages %>
 
@@ -8,5 +9,18 @@
   <p>
     <%= f.submit 'Save' %>
   </p>
+  <h2>Goals</h2>
+  <% f.fields_for :goals do |goal_form| %>
+    <p>
+      <%= goal_form.label :description, 'Goal:' %>
+      <%= goal_form.text_field :description %>
+    </p>
+      <% unless goal_form.object.nil? || goal_form.object.new_record? %>
+      <%= goal_form.label :_delete, 'Remove:' %>
+      <%= goal_form.check_box :_delete %>
+    <% end %>
+  <% end %>
+
+
 <% end %>
 
